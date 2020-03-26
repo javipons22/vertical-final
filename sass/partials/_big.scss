@@ -1,0 +1,8 @@
+@include media-breakpoint-up(xl) {
+    .carousel-inner {
+        height:550px;
+    }
+    .fila {
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,6 @@
+@include media-breakpoint-up(sm) {
+    .marcas {
+        // usamos row-cols de esta forma porque como clase no funciona en responsive
+        @include row-cols(4);
+    }
+}

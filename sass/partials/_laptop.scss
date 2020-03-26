@@ -1,0 +1,150 @@
+@include media-breakpoint-up(lg) {
+    body {
+        max-height:100%;
+        
+        margin: 3em 0;
+    }
+
+    .background {
+        position:fixed;
+        width:100vw;
+        height:100vh;
+        background:url("/vertical/img/fondo.jpg") rgba(0, 0, 0, 0.4);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-blend-mode: multiply;
+        top:0;
+        bottom: 0;
+        left:0;
+        right:0;
+    }
+    .main-header {
+        position:relative;
+        border:none;
+        &__logo {
+            height:70px;
+            margin:0;
+        }
+    }
+    .main-nav {
+        font-size: 0.85em;
+        &__link {
+            position:relative;
+            border-bottom: none;
+            width:100%;
+            &:after {
+                content:"|";
+                position:absolute;
+                right:-17px;
+                color: #ccc;
+            }
+            &--last:after {
+                content:"";
+            }
+            &:hover {
+                color: $verde-vertical;
+                text-decoration: none;
+                transition: ease-in-out 0.15s;
+                border-top: 1px solid $verde-vertical;
+                border-bottom: 1px solid $verde-vertical;
+                
+            }
+            &--selected {
+                color: $verde-vertical;
+                text-decoration: none;
+                border-top: 1px solid $verde-vertical;
+                border-bottom: 1px solid $verde-vertical;
+                
+            }
+        }
+    }
+    .social-nav {
+        background: $verde-vertical;
+
+        // Importante , este padding va a cambiar el tamaño de todo el header.
+        // lo seteamos desde aca para que no se hagan bordes blancos en el social-nav
+        padding: 25px 0;
+        &__element {
+            max-width:50px;
+        }
+        &__icon {
+            color: white;
+            font-size: 25px;
+        }
+        &__link:hover &__icon {
+            color:black;
+            
+        }
+    }
+
+    // clip path para divs diagonales
+    .clippeado {
+        height:121px;
+        background:white;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 65%, 25% 65%, 0 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 65%, 25% 65%, 0 100%);
+        position:relative;
+        overflow:hidden;
+        
+    }
+
+    .wrap-shadow {
+        filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
+        position:relative;
+        transform: translateY(8%);
+        z-index:100;
+    }
+    .contenido {
+        filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
+        position:relative;
+        transform: translateY(0);
+    }
+
+    .marcas {
+        @include row-cols(8);
+        >div {
+            // valor extremadamente grande para hacer override de propiedad en _tablet.scss
+            max-width:500px;
+        }
+    }
+
+    .carousel-inner {
+        height:350px;
+    }
+
+    // FOOTER
+    .footer {
+        background:none;
+        height: 310px;
+        margin: 0 auto;
+        padding:0;
+        filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
+        &__logo {
+            width:50%;
+        }
+    }
+
+    .clippeado2 {
+        width:101%;
+        height:100%;
+        background:#333;
+        color: #ccc;
+        -webkit-clip-path: polygon(0 13%, 75% 13%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 13%, 75% 13%, 100% 0, 100% 100%, 0 100%);
+        transform: translateY(-4%);
+        position:relative;
+        overflow: hidden;
+    }
+    .footer__contenido {
+        transform: translateY(30%);
+        height:70%;
+    }
+
+    .sucursal {
+        &__contenedor-imagen {
+            overflow: hidden;
+            flex-basis: 38%;
+        }
+    }
+    
+}

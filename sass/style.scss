@@ -1,0 +1,12 @@
+
+// Your variable overrides
+$enable-responsive-font-sizes: true;
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "partials/variables";
+@import "partials/main";
+@import "partials/cel";
+@import "partials/tablet";
+@import "partials/laptop";
+@import "partials/big";
+@import "partials/hamb-icon";

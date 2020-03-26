@@ -51,5 +51,14 @@ jQuery(document).ready(function($){
         }
     });
     // FIN CAMBIO DE SUCURSALES FOOTER (FIN) ------------------
+
+    // INICIO CREADOR SUCURSALES - PAGINA SUCURSALES (INICIO) ------------------
+    // De esta forma se itera cuando los valores del objeto son arrays (obtenido de internet)
+    for (var [key, value] of Object.entries(sucursales)){
+        // funcion disponible en archivo sucursales.js
+        var HTMLSucursal = crearHTMLSucursal(value[0],value[1],value[2],value[3],value[4],'#','#','#');
+        $(".sucursales-container" ).append(HTMLSucursal);
+    }
+    // FIN CREADOR SUCURSALES - PAGINA SUCURSALES (FIN) ------------------
     
 });

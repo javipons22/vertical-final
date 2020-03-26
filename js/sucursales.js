@@ -15,7 +15,7 @@ function crearHTMLSucursal(nombre,direccion,telefono,email,linkImg,linkWhatsapp,
     return `
     <div class="col mt-4">
         <div class="row sucursal mx-1 d-flex flex-nowrap">
-            <div class="d-flex sucursal__contenedor-imagen"><img class="sucursal__imagen" src="img/sucursales/${linkImg}" alt="sucursal cordoba"></div>
+            <div class="d-flex sucursal__contenedor-imagen"><img class="sucursal__imagen" src="../img/sucursales/${linkImg}" alt="sucursal cordoba"></div>
             <div class="col py-2 pl-3 d-flex flex-column justify-content-between ">
                 
                     <h6 class="sucursal__titulo mt-3 mb-3">SUCURSAL ${nombre}</h6>

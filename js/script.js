@@ -42,38 +42,14 @@ jQuery(document).ready(function($){
 
     // INICIO CAMBIO DE SUCURSALES FOOTER (INICIO) ------------------
     // Cambio de Sucursales footer
-    $('#sucursal').on('change', function() {
+    $('#sucursal-footer-select').on('change', function() {
         var sucursal = this.value;
+        console.log(sucursal);
         for (var i = 0; i < 3 ; i++) {
             // i + 1 porque tiene que empezar desde el 2do elemento del array sucursales
             $(`.contacto-footer-${i}`).html(sucursales[sucursal][i+1]);
         }
     });
     // FIN CAMBIO DE SUCURSALES FOOTER (FIN) ------------------
-
-    // INICIO MARCADOR DE PAGINAS EN NAV (INICIO) ------------------
-    // Marcador de pagina actual en header para el nav
-    var pathname = window.location.pathname;
-    // dividimos el path en un array para acceder al ultimo elemento
-    var splitPath = pathname.split("/");
-    // Obtenemos el index del ultimo elemento
-    var lastIndex = splitPath.length - 1;
-
-    // (ELSE) si el elemento esta vacio es HOME , por eso agregamos la clase selected a .home en el else
-    if (splitPath[lastIndex].length > 0) {
-        $("." + splitPath[lastIndex]).addClass('main-nav__link--selected');
-    } else {
-        $(".home").addClass('main-nav__link--selected');
-    }
-    // FIN MARCADOR DE PAGINAS EN NAV (FIN) ------------------
-
-    // INICIO CREADOR SUCURSALES - PAGINA SUCURSALES (INICIO) ------------------
-    // De esta forma se itera cuando los valores del objeto son arrays (obtenido de internet)
-    for (var [key, value] of Object.entries(sucursales)){
-        // funcion disponible en archivo sucursales.js
-        var HTMLSucursal = crearHTMLSucursal(value[0],value[1],value[2],value[3],value[4],'#','#','#');
-        $(".sucursales-container" ).append(HTMLSucursal);
-    }
-    // FIN CREADOR SUCURSALES - PAGINA SUCURSALES (FIN) ------------------
     
 });

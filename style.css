@@ -10238,7 +10238,7 @@ button:focus {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: url("/vertical/img/fondo.jpg") rgba(0, 0, 0, 0.4);
+    background: url("/vertical-final/img/fondo.jpg") rgba(0, 0, 0, 0.4);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;

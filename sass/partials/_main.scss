@@ -28,6 +28,7 @@ button:focus {
     top:0;
     background:white;
     border-bottom: 1px solid #bbb;
+    overflow:hidden;
     &__logo {
         height:60px;
         // de aca se cambia el tamaño de header en version mobile
@@ -288,8 +289,8 @@ button:focus {
     &__formulario {
         font-family: Montserrat;
         input,textarea,select {
-            border: 2px solid $verde-vertical;
-            font-size:0.9em;
+            border: 0.75px solid $verde-vertical;
+            font-size:0.85em;
             color: #777;
         }
     }
@@ -297,5 +298,16 @@ button:focus {
         background: $verde-vertical;
         outline:none;
         border:none;
+    }
+}
+
+.easy-rental {
+    &__imagen {
+        width:100%;
+    }
+    &__texto {
+        padding:35px;
+        padding-top: 0;
+        font-size:0.9em;
     }
 }

@@ -9951,6 +9951,7 @@ button:focus {
   top: 0;
   background: white;
   border-bottom: 1px solid #bbb;
+  overflow: hidden;
 }
 .main-header__logo {
   height: 60px;
@@ -10203,14 +10204,23 @@ button:focus {
   font-family: Montserrat;
 }
 .consulta__formulario input, .consulta__formulario textarea, .consulta__formulario select {
-  border: 2px solid #00c813;
-  font-size: 0.9em;
+  border: 0.75px solid #00c813;
+  font-size: 0.85em;
   color: #777;
 }
 .consulta__btn-submit {
   background: #00c813;
   outline: none;
   border: none;
+}
+
+.easy-rental__imagen {
+  width: 100%;
+}
+.easy-rental__texto {
+  padding: 35px;
+  padding-top: 0;
+  font-size: 0.9em;
 }
 
 @media (min-width: 576px) {
@@ -10238,7 +10248,7 @@ button:focus {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: url("/vertical-final/img/fondo.jpg") rgba(0, 0, 0, 0.4);
+    background: url("./img/fondo.jpg") rgba(0, 0, 0, 0.4);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;

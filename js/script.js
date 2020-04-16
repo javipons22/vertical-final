@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
             // INICIO FUNCION CAMBIAR IMAGENES BANNER EN MOBIL CON RESPECTO A LAPTOP
             // Borramos todos los slides del container
             $(".carousel-container-js").empty();
-            for(var i = 1; i <= 3; i++){
+            for(var i = 1; i <= 4; i++){
                 // si es la primera foto , en div class agregar active
                 if(i == 1) {
                     $(".carousel-container-js" ).append( `<div class="carousel-item active"><img src="img/banner${i}.jpg" class="d-block w-100 img-carousel" alt="imagen banner ${i}"></div>` );
@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
             }
         } else {
             $(".carousel-container-js").empty();
-            for(var i = 1; i <= 3; i++){
+            for(var i = 1; i <= 4; i++){
                 // si es la primera foto , en div class agregar active
                 if(i == 1) {
                     $(".carousel-container-js" ).append( `<div class="carousel-item active"><img src="img/banner-mobile${i}.jpg" class="d-block w-100 img-carousel" alt="imagen banner ${i}"></div>` );
@@ -45,7 +45,7 @@ jQuery(document).ready(function($){
     $('#sucursal-footer-select').on('change', function() {
         var sucursal = this.value;
         console.log(sucursal);
-        for (var i = 0; i < 3 ; i++) {
+        for (var i = 0; i < 4 ; i++) {
             // i + 1 porque tiene que empezar desde el 2do elemento del array sucursales
             $(`.contacto-footer-${i}`).html(sucursales[sucursal][i+1]);
         }
@@ -56,7 +56,7 @@ jQuery(document).ready(function($){
     // De esta forma se itera cuando los valores del objeto son arrays (obtenido de internet)
     for (var [key, value] of Object.entries(sucursales)){
         // funcion disponible en archivo sucursales.js
-        var HTMLSucursal = crearHTMLSucursal(value[0],value[1],value[2],value[3],value[4],'#','#','#');
+        var HTMLSucursal = crearHTMLSucursal(value[0],value[1],value[2],value[3],value[4],value[5],'#','#');
         $(".sucursales-container" ).append(HTMLSucursal);
     }
     // FIN CREADOR SUCURSALES - PAGINA SUCURSALES (FIN) ------------------
